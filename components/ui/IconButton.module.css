@@ -1,0 +1,3 @@
+.button { width: 2.75rem; height: 2.75rem; display: inline-grid; place-items: center; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-primary); color: var(--text-primary); cursor: pointer; transition: background-color var(--duration-fast), border-color var(--duration-fast); }
+.button:hover { background: var(--surface-secondary); border-color: var(--border-strong); }
+.button svg { width: 1.15rem; height: 1.15rem; }
