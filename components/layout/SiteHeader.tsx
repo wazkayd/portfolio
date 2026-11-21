@@ -30,7 +30,10 @@ export function SiteHeader() {
     document.addEventListener("keydown", dismiss);
     return () => document.removeEventListener("keydown", dismiss);
   }, [open]);
-  const close = () => setOpen(false);
+  const close = () => {
+    setOpen(false);
+    menuButtonRef.current?.focus();
+  };
   return <header className={styles.header}>
     <Container className={styles.inner}>
       <Link className={styles.brand} href="/#top" aria-label="Wazka home"><span className={styles.mark} aria-hidden="true">W</span><span>Wazka<span className={styles.brandDot}>.</span></span></Link>
