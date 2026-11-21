@@ -1,0 +1,21 @@
+.header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid color-mix(in srgb, var(--border-subtle), transparent 12%); background: color-mix(in srgb, var(--surface-primary), transparent 5%); backdrop-filter: blur(18px); }
+.inner { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--text-primary); font-size: 1.05rem; font-weight: 720; letter-spacing: -.035em; text-decoration: none; }
+.mark { width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: .55rem; background: var(--color-brand-800); color: var(--surface-primary); font-family: var(--font-display); font-size: 1.2rem; }
+.brandDot { color: var(--color-accent); }
+.nav { display: flex; align-items: center; gap: clamp(1rem, 2.3vw, 2rem); }
+.nav a { position: relative; padding-block: .45rem; color: var(--text-secondary); font-size: var(--text-sm); text-decoration: none; transition: color var(--duration-fast); }
+.nav a:hover, .nav a.active { color: var(--text-primary); }
+.nav a.active::after { position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background: var(--color-accent); content: ""; }
+.actions { display: flex; align-items: center; }
+.desktopTheme { display: block; }
+.mobileMenu, .mobileTheme { display: none; }
+@media (max-width: 52rem) {
+  .desktopTheme { display: none; }
+  .mobileMenu { display: block; }
+  .nav { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: .75rem max(1rem, calc((100vw - var(--container-wide)) / 2)); border-bottom: 1px solid var(--border-subtle); background: var(--surface-primary); box-shadow: var(--shadow-md); }
+  .navOpen { display: flex; flex-direction: column; }
+  .nav a { padding: .9rem .35rem; }
+  .nav a.active::after { right: auto; width: 2rem; }
+  .mobileTheme { display: block; padding-top: .8rem; border-top: 1px solid var(--border-subtle); }
+}
