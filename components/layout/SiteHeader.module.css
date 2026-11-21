@@ -19,3 +19,4 @@
   .nav a.active::after { right: auto; width: 2rem; }
   .mobileTheme { display: block; padding-top: .8rem; border-top: 1px solid var(--border-subtle); }
 }
+@media (max-width: 52rem) { .nav:not(.navOpen) { visibility: hidden; pointer-events: none; } .navOpen { visibility: visible; pointer-events: auto; } }
