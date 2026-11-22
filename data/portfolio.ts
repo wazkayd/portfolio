@@ -1,7 +1,16 @@
-import type { Capability, ExperienceHighlight, Project, Service } from "@/types/portfolio";
+import type { Capability, ExperienceHighlight, Project, ProjectCategoryOption, Service } from "@/types/portfolio";
 
-// Add only projects whose names, scope, contribution, and status have been confirmed.
-export const featuredProjects: Project[] = [];
+// Add only projects whose name, scope, contribution, category, and status have been confirmed.
+export const projects: Project[] = [];
+export const featuredProjects = projects.filter(project => project.featured);
+
+export const projectCategories: readonly ProjectCategoryOption[] = [
+  { id: "saas", label: "SaaS", description: "Subscription software and multi-tenant products." },
+  { id: "enterprise", label: "Enterprise applications", description: "Internal systems and software for complex organizations." },
+  { id: "dashboard", label: "Dashboards & analytics", description: "Tools that make operational data easier to understand." },
+  { id: "e-commerce", label: "E-commerce", description: "Digital storefronts and commerce experiences." },
+  { id: "web-platform", label: "Web apps & platforms", description: "Other web products, platforms, and marketplaces." },
+];
 
 // Experience and client history are intentionally empty until verified details are supplied.
 export const experienceHighlights: ExperienceHighlight[] = [];
