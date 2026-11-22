@@ -11,8 +11,8 @@ import styles from "./SiteHeader.module.css";
 const links = [
   { href: "/#top", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/#capabilities", label: "Capabilities" },
-  { href: "/#services", label: "Services" },
+  { href: "/capabilities", label: "Capabilities" },
+  { href: "/services", label: "Services" },
   { href: "/#experience", label: "Experience" },
 ];
 
@@ -39,7 +39,9 @@ export function SiteHeader() {
       <Link className={styles.brand} href="/#top" aria-label="Wazka home"><span className={styles.mark} aria-hidden="true">W</span><span>Wazka<span className={styles.brandDot}>.</span></span></Link>
       <nav id="primary-navigation" className={`${styles.nav} ${open ? styles.navOpen : ""}`} aria-label="Main navigation">
         {links.map((link, index) => {
-          const active = link.href === "/projects" ? pathname === "/projects" : pathname === "/" && link.href.endsWith("top");
+          const active = link.href === "/#top"
+            ? pathname === "/"
+            : pathname === link.href;
           return <Link ref={index === 0 ? firstLinkRef : undefined} key={link.href} className={active ? styles.active : undefined} aria-current={active ? "page" : undefined} href={link.href} onClick={close}>{link.label}</Link>;
         })}
         <div className={styles.mobileTheme}><ThemeToggle /></div>

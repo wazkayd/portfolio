@@ -25,5 +25,15 @@ export type ExperienceHighlight = {
   summary: string;
 };
 
-export type Service = { title: string; description: string };
-export type Capability = { title: string; description: string };
+export type Service = {
+  title: string;
+  description: string;
+  goodFit: string;
+  workIncludes: readonly string[];
+};
+
+export type Capability = {
+  title: string;
+  description: string;
+  focusAreas: readonly string[];
+};

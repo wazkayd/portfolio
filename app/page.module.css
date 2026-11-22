@@ -41,6 +41,7 @@
 .services { background: var(--surface-secondary); }
 .serviceLayout { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--space-9); }
 .serviceIntro { max-width: 27rem; }
+.serviceLinks { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-4); }
 .serviceList { border-top: 1px solid var(--border-strong); }
 .serviceItem { display: grid; grid-template-columns: 2rem 1fr 1.5rem; align-items: start; gap: var(--space-3); padding-block: var(--space-4); border-bottom: 1px solid var(--border-strong); }
 .serviceItem h3 { margin: 0 0 var(--space-2); }
