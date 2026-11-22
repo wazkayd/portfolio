@@ -13,7 +13,9 @@ const links = [
   { href: "/projects", label: "Projects" },
   { href: "/capabilities", label: "Capabilities" },
   { href: "/services", label: "Services" },
-  { href: "/#experience", label: "Experience" },
+  { href: "/experience", label: "Experience" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
@@ -39,9 +41,7 @@ export function SiteHeader() {
       <Link className={styles.brand} href="/#top" aria-label="Wazka home"><span className={styles.mark} aria-hidden="true">W</span><span>Wazka<span className={styles.brandDot}>.</span></span></Link>
       <nav id="primary-navigation" className={`${styles.nav} ${open ? styles.navOpen : ""}`} aria-label="Main navigation">
         {links.map((link, index) => {
-          const active = link.href === "/#top"
-            ? pathname === "/"
-            : pathname === link.href;
+          const active = link.href === "/#top" ? pathname === "/" : pathname === link.href;
           return <Link ref={index === 0 ? firstLinkRef : undefined} key={link.href} className={active ? styles.active : undefined} aria-current={active ? "page" : undefined} href={link.href} onClick={close}>{link.label}</Link>;
         })}
         <div className={styles.mobileTheme}><ThemeToggle /></div>

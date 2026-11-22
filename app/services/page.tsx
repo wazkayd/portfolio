@@ -56,7 +56,7 @@ export default function ServicesPage() {
         <div><Eyebrow>Need a particular skill set?</Eyebrow><h2 id="next-step-title">See the engineering capabilities behind the work.</h2></div>
         <div className={styles.nextLinks}>
           <Link className={styles.nextLink} href="/capabilities">Explore capabilities <ArrowRight size={16} aria-hidden="true" /></Link>
-          <Link className={styles.nextLink} href="/#contact">Start a conversation <ArrowRight size={16} aria-hidden="true" /></Link>
+          <Link className={styles.nextLink} href="/contact">Start a conversation <ArrowRight size={16} aria-hidden="true" /></Link>
         </div>
       </Container>
     </Section>

@@ -1,0 +1,28 @@
+.hero { padding-block: var(--space-5) var(--space-8); background: var(--surface-primary); }
+.breadcrumb { display: flex; align-items: center; gap: var(--space-2); margin-bottom: clamp(2.5rem, 6vw, 5rem); color: var(--text-muted); font-size: var(--text-xs); }
+.breadcrumb a { color: var(--text-secondary); text-decoration: none; }
+.breadcrumb a:hover { color: var(--text-primary); text-decoration: underline; }
+.heroContent { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(15rem, .6fr); align-items: flex-end; gap: clamp(2rem, 8vw, 8rem); }
+.hero h1 { max-width: 15ch; margin: var(--space-4) 0 0; font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 5.4rem); font-weight: 400; letter-spacing: -.055em; line-height: var(--line-tight); }
+.hero h1 span { color: var(--color-accent); }
+.lede { max-width: 42rem; margin: var(--space-5) 0 0; color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.65; }
+.invitation { max-width: 24rem; margin: 0; padding: var(--space-5); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: var(--surface-canvas); }
+.invitation svg { color: var(--color-brand-600); }
+.invitation p { margin: var(--space-3) 0 0; color: var(--text-secondary); font-size: var(--text-sm); }
+.contactSection { background: var(--surface-secondary); }
+.contactLayout { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: var(--space-8); }
+.contactIntro h2, .nextStep h2 { max-width: 22ch; margin: var(--space-2) 0 0; font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 400; letter-spacing: -.035em; line-height: var(--line-heading); }
+.contactIntro > p { max-width: 34rem; color: var(--text-secondary); font-size: var(--text-sm); }
+.contactIntro > a { margin-top: var(--space-3); }
+.contactIntro > a svg:first-child { margin-right: .25rem; }
+.note { padding: var(--space-5); border-left: 2px solid var(--color-accent); background: var(--surface-primary); }
+.note h3 { margin: 0 0 var(--space-2); font-size: var(--text-md); }
+.note p { margin: 0; color: var(--text-secondary); font-size: var(--text-sm); }
+.note p + p { margin-top: var(--space-3); }
+.nextStep { border-top: 1px solid var(--border-subtle); background: var(--surface-primary); }
+.nextStepInner { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-5); }
+.links { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+.links a { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--text-primary); font-size: var(--text-sm); font-weight: 650; text-decoration: none; }
+.links a:hover { color: var(--color-brand-600); }
+@media (max-width: 52rem) { .heroContent, .contactLayout { grid-template-columns: 1fr; gap: var(--space-6); } .invitation { max-width: 35rem; } }
+@media (max-width: 40rem) { .hero { padding-top: var(--space-4); } .breadcrumb { margin-bottom: var(--space-7); } .hero h1 { max-width: 12ch; font-size: clamp(2.2rem, 11vw, 3.5rem); } .contactLayout { gap: var(--space-5); } .nextStepInner { align-items: flex-start; flex-direction: column; } }

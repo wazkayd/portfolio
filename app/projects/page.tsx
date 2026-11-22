@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             <Eyebrow>Selected work</Eyebrow>
             <h1 id="projects-title">Projects shaped around real needs<span>.</span></h1>
             <p className={styles.lede}>A catalogue of digital products and the engineering behind them. Browse by product type to find work that fits your team, challenge, or idea.</p>
-            <Link className={styles.approachLink} href="/#capabilities">Explore how I contribute <ArrowRight size={16} aria-hidden="true" /></Link>
+            <Link className={styles.approachLink} href="/capabilities">Explore how I contribute <ArrowRight size={16} aria-hidden="true" /></Link>
           </div>
           <aside className={styles.principle}>
             <span className={styles.principleIcon}><Compass aria-hidden="true" /></span>
@@ -46,7 +46,7 @@ export default function ProjectsPage() {
     <Section className={styles.nextStep} aria-labelledby="next-step-title">
       <Container className={styles.nextStepInner}>
         <div><Eyebrow>Looking for a particular capability?</Eyebrow><h2 id="next-step-title">See how the work gets done.</h2></div>
-        <Link className={styles.approachLink} href="/#capabilities">View engineering capabilities <ArrowRight size={16} aria-hidden="true" /></Link>
+        <Link className={styles.approachLink} href="/capabilities">View engineering capabilities <ArrowRight size={16} aria-hidden="true" /></Link>
       </Container>
     </Section>
   </>;
