@@ -1,0 +1,17 @@
+.card { height: 100%; display: flex; flex-direction: column; padding: var(--space-5); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--surface-primary); transition: border-color var(--duration-fast), box-shadow var(--duration-fast), transform var(--duration-fast); }
+.card:hover { border-color: var(--border-strong); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+.meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); }
+.status { color: var(--text-muted); font-size: var(--text-xs); font-weight: 650; }
+.card h3 { margin: var(--space-4) 0 var(--space-2); font-family: var(--font-display); font-size: var(--text-xl); font-weight: 400; letter-spacing: -.025em; line-height: var(--line-heading); }
+.summary { margin: 0; color: var(--text-secondary); font-size: var(--text-sm); }
+.details { display: grid; gap: var(--space-3); margin: var(--space-4) 0 0; padding-top: var(--space-4); border-top: 1px solid var(--border-subtle); }
+.details div { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--space-3); }
+.details dt { color: var(--text-muted); font-size: var(--text-xs); font-weight: 700; }
+.details dd { margin: 0; color: var(--text-secondary); font-size: var(--text-xs); }
+.cardFooter { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); margin-top: auto; padding-top: var(--space-5); }
+.technologies { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; }
+.technologies li { padding: .2rem .55rem; border-radius: var(--radius-pill); background: var(--surface-secondary); color: var(--text-secondary); font-size: var(--text-xs); }
+.projectLink { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--text-primary); font-size: var(--text-sm); font-weight: 650; text-decoration: none; }
+.projectLink:hover { color: var(--color-brand-600); }
+@media (max-width: 40rem) { .card { padding: var(--space-4); } .details div { grid-template-columns: 1fr; gap: var(--space-1); } }
+@media (prefers-reduced-motion: reduce) { .card:hover { transform: none; } }
