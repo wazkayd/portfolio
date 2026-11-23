@@ -15,6 +15,11 @@ export const projectCategories: readonly ProjectCategoryOption[] = [
 // Experience and client history are intentionally empty until verified details are supplied.
 export const experienceHighlights: ExperienceHighlight[] = [];
 
+// Existing public destination used by the homepage; no email or form endpoint is configured.
+export const publicContact = {
+  github: "https://github.com/wazkayd",
+} as const;
+
 export const capabilities: Capability[] = [
   {
     title: "Product engineering",
