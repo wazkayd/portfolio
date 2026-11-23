@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Compass } from "lucide-react";
 import { ProjectsCatalogue } from "@/components/projects/ProjectsCatalogue";
 import { Container, Section } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Text";
 import { projectCategories, projects } from "@/data/portfolio";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Projects",
-  description: "Explore software projects by product type, including SaaS, enterprise applications, dashboards, e-commerce, and web platforms.",
-};
+export const metadata = createPageMetadata("Projects", "Explore software projects by product type, including SaaS, enterprise applications, dashboards, e-commerce, and web platforms.", "/projects");
 
 export default function ProjectsPage() {
   return <>

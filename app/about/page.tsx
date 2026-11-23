@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Compass, Layers3, UsersRound } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Text";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "A product-minded approach to software engineering, collaboration, and building useful digital products.",
-};
+export const metadata = createPageMetadata("About", "A product-minded approach to software engineering, collaboration, and building useful digital products.", "/about");
 
 const principles = [
   { title: "Start with the need", description: "Understand the people, problem, and constraints before settling on a product or technical direction.", icon: Compass },

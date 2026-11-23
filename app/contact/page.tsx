@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Github, MessageCircle } from "lucide-react";
 import { LinkButton } from "@/components/ui/Button";
 import { Container, Section } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Text";
 import { publicContact } from "@/data/portfolio";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Start a conversation about a product challenge, engineering opportunity, or collaboration.",
-};
+export const metadata = createPageMetadata("Contact", "Start a conversation about a product challenge, engineering opportunity, or collaboration.", "/contact");
 
 export default function ContactPage() {
   return <>

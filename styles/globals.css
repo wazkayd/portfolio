@@ -8,7 +8,8 @@ body { margin: 0; background: var(--surface-canvas); color: var(--text-primary);
 a { color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em; }
 button { font: inherit; }
 ::selection { background: var(--color-accent-soft); color: var(--text-primary); }
-:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+:focus-visible { outline: 2px solid var(--color-brand-600); outline-offset: 3px; box-shadow: var(--focus-ring); }
 .skipLink { position: fixed; z-index: 100; top: var(--space-3); left: var(--space-3); padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); background: var(--surface-raised); color: var(--text-primary); transform: translateY(-180%); }
 .skipLink:focus { transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+@media (forced-colors: active) { :focus-visible { outline: 2px solid CanvasText; box-shadow: none; } }
