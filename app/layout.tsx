@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { createPageMetadata } from "@/lib/seo";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
+  ...createPageMetadata("Home", "Software engineering and product development portfolio. I build digital products that solve real business problems.", "/"),
   title: { default: "Wazka — Product-minded Software Engineer", template: "%s | Wazka" },
-  description: "Software engineering and product development portfolio. I build digital products that solve real business problems.",
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f7f6f2" }, { media: "(prefers-color-scheme: dark)", color: "#141a19" }] };
 

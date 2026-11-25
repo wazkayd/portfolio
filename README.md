@@ -16,6 +16,10 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Search and social metadata
+
+Set `NEXT_PUBLIC_SITE_URL` to the canonical HTTPS origin for the production deployment (for example, the verified custom domain). Static page canonicals and Open Graph URLs read this value at build time; on Vercel, `VERCEL_PROJECT_PRODUCTION_URL` is used when available. The dynamic sitemap and `robots.txt` can also use `VERCEL_URL` at runtime. These URLs are emitted only when a valid HTTPS origin is available; local and unconfigured preview builds do not publish a guessed domain.
+
 ## Commands
 
 - `npm run dev` — start local development

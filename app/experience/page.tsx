@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BriefcaseBusiness } from "lucide-react";
 import { Container, Section } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Text";
 import { experienceHighlights } from "@/data/portfolio";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Experience",
-  description: "Professional experience and engineering contributions, shared only where details are verified.",
-};
+export const metadata = createPageMetadata("Experience", "Professional experience and engineering contributions, shared only where details are verified.", "/experience");
 
 export default function ExperiencePage() {
   return <>

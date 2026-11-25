@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { OfferingCard } from "@/components/offerings/OfferingCard";
@@ -6,12 +5,10 @@ import { Reveal } from "@/components/home/Reveal";
 import { Container, Section } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Text";
 import { services } from "@/data/portfolio";
+import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Practical product discovery, web application development, and product improvement support.",
-};
+export const metadata = createPageMetadata("Services", "Practical product discovery, web application development, and product improvement support.", "/services");
 
 export default function ServicesPage() {
   return <>

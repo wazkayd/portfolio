@@ -37,7 +37,7 @@
 .tags li { padding: .2rem .55rem; border-radius: var(--radius-pill); background: var(--surface-secondary); color: var(--text-secondary); font-size: var(--text-xs); }
 .capabilities { background: var(--surface-primary); }
 .capabilityGrid { grid-template-columns: repeat(4, 1fr); }
-.index, .serviceItem > span { color: var(--color-accent); font-size: var(--text-xs); font-weight: 700; letter-spacing: .08em; }
+.index, .serviceItem > span { color: var(--color-accent-ink); font-size: var(--text-xs); font-weight: 700; letter-spacing: .08em; }
 .services { background: var(--surface-secondary); }
 .serviceLayout { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--space-9); }
 .serviceIntro { max-width: 27rem; }

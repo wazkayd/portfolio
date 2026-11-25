@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { OfferingCard } from "@/components/offerings/OfferingCard";
 import { Container, Section } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Text";
 import { capabilities } from "@/data/portfolio";
+import { createPageMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/home/Reveal";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Capabilities",
-  description: "Explore product engineering, full-stack development, technical direction, and product collaboration capabilities.",
-};
+export const metadata = createPageMetadata("Capabilities", "Explore product engineering, full-stack development, technical direction, and product collaboration capabilities.", "/capabilities");
 
 export default function CapabilitiesPage() {
   return <>
