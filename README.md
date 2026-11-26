@@ -18,7 +18,7 @@ Open http://localhost:3000.
 
 ## Search and social metadata
 
-Set `NEXT_PUBLIC_SITE_URL` to the canonical HTTPS origin for the production deployment (for example, the verified custom domain). Static page canonicals and Open Graph URLs read this value at build time; on Vercel, `VERCEL_PROJECT_PRODUCTION_URL` is used when available. The dynamic sitemap and `robots.txt` can also use `VERCEL_URL` at runtime. These URLs are emitted only when a valid HTTPS origin is available; local and unconfigured preview builds do not publish a guessed domain.
+Set `NEXT_PUBLIC_SITE_URL` to the canonical HTTPS origin when the production domain is known. On Vercel, `VERCEL_PROJECT_PRODUCTION_URL` supplies that origin when the variable is unset, and a production deployment can also use `VERCEL_URL`. Preview deployments are marked noindex and do not publish a guessed canonical domain. The sitemap and `robots.txt` include the production origin only when it is available.
 
 ## Commands
 

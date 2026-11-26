@@ -4,6 +4,10 @@ import { siteOrigin } from "@/lib/seo";
 export const dynamic = "force-dynamic";
 
 export default function robots(): MetadataRoute.Robots {
+  if (process.env.VERCEL_ENV === "preview") {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
+
   return {
     rules: { userAgent: "*", allow: "/" },
     ...(siteOrigin ? { sitemap: new URL("/sitemap.xml", siteOrigin).toString(), host: siteOrigin.host } : {}),

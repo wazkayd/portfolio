@@ -31,7 +31,7 @@ export default function ContactPage() {
           <Eyebrow>Start a conversation</Eyebrow>
           <h2 id="contact-path-title">Connect through a public profile.</h2>
           <p>GitHub is the public contact destination already linked from this portfolio.</p>
-          <LinkButton href={publicContact.github} target="_blank" rel="noreferrer"><Github size={17} aria-hidden="true" /> Visit GitHub profile <ArrowRight size={16} aria-hidden="true" /></LinkButton>
+          <LinkButton href={publicContact.github} target="_blank" rel="noopener noreferrer"><Github size={17} aria-hidden="true" /> Visit GitHub profile <ArrowRight size={16} aria-hidden="true" /></LinkButton>
         </div>
         <aside className={styles.note}>
           <h3>About direct contact</h3>
