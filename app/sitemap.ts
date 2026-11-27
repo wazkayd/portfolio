@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 const routes = ["/", "/projects", "/capabilities", "/services", "/experience", "/about", "/contact"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  if (!siteOrigin) return [];
+  if (!siteOrigin || process.env.VERCEL_ENV === "preview") return [];
 
   return routes.map((route, index) => ({
     url: new URL(route, siteOrigin).toString(),
