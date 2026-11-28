@@ -6,7 +6,7 @@ import { experienceHighlights } from "@/data/portfolio";
 import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = createPageMetadata("Experience", "Professional experience and engineering contributions, shared only where details are verified.", "/experience");
+export const metadata = createPageMetadata("Experience", "Professional experience and engineering contributions, shared only where the role, the period, and the contribution are verified.", "/experience");
 
 export default function ExperiencePage() {
   return <>

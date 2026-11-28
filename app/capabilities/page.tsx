@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/home/Reveal";
 import styles from "./page.module.css";
 
-export const metadata = createPageMetadata("Capabilities", "Explore product engineering, full-stack development, technical direction, and product collaboration capabilities.", "/capabilities");
+export const metadata = createPageMetadata("Capabilities", "Explore product engineering, full-stack development, technical direction, and collaboration across meaningful product work.", "/capabilities");
 
 export default function CapabilitiesPage() {
   return <>
