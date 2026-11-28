@@ -8,7 +8,7 @@ import { services } from "@/data/portfolio";
 import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = createPageMetadata("Services", "Practical product discovery, web application development, and product improvement support.", "/services");
+export const metadata = createPageMetadata("Services", "Early product discovery, web application development, and focused improvement of a digital product that is already in use.", "/services");
 
 export default function ServicesPage() {
   return <>

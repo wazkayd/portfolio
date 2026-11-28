@@ -7,7 +7,7 @@ import { publicContact } from "@/data/portfolio";
 import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = createPageMetadata("Contact", "Start a conversation about a product challenge, engineering opportunity, or collaboration.", "/contact");
+export const metadata = createPageMetadata("Contact", "Start a conversation about a product challenge, an engineering opportunity, or a collaboration you would like to explore.", "/contact");
 
 export default function ContactPage() {
   return <>

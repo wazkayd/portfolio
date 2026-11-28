@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { shareImageAlt, shareImageContentType, shareImageSize } from "@/lib/share-image";
 
 function httpsOrigin(value: string | undefined) {
   const trimmed = value?.trim();
@@ -23,6 +24,13 @@ export const siteOrigin = (() => {
   }
 })();
 
+const shareImage = {
+  alt: shareImageAlt,
+  type: shareImageContentType,
+  width: shareImageSize.width,
+  height: shareImageSize.height,
+} as const;
+
 export function createPageMetadata(title: string, description: string, path: string): Metadata {
   const canonical = siteOrigin ? new URL(path, siteOrigin).toString() : undefined;
   const shareTitle = title === "Home" ? "Wazka — Product-minded Software Engineer" : `${title} | Wazka`;
@@ -38,11 +46,14 @@ export function createPageMetadata(title: string, description: string, path: str
       siteName: "Wazka",
       locale: "en_US",
       ...(canonical ? { url: canonical } : {}),
+      // A nested openGraph object replaces the root file image, so each route names it explicitly.
+      images: [{ url: "/opengraph-image", ...shareImage }],
     },
     twitter: {
       card: "summary_large_image",
       title: shareTitle,
       description,
+      images: [{ url: "/twitter-image", ...shareImage }],
     },
   };
 }

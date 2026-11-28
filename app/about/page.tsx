@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/ui/Text";
 import { createPageMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = createPageMetadata("About", "A product-minded approach to software engineering, collaboration, and building useful digital products.", "/about");
+export const metadata = createPageMetadata("About", "A product-minded approach to software engineering, collaboration, and building useful digital products with teams and founders.", "/about");
 
 const principles = [
   { title: "Start with the need", description: "Understand the people, problem, and constraints before settling on a product or technical direction.", icon: Compass },

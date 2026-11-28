@@ -5,7 +5,7 @@ import { createPageMetadata, siteOrigin } from "@/lib/seo";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  ...createPageMetadata("Home", "Software engineering and product development portfolio. I build digital products that solve real business problems.", "/"),
+  ...createPageMetadata("Home", "Software engineering and product development portfolio. I build digital products that solve real business problems for teams and founders.", "/"),
   ...(siteOrigin ? { metadataBase: siteOrigin } : {}),
   applicationName: "Wazka",
   title: { default: "Wazka — Product-minded Software Engineer", template: "%s | Wazka" },
